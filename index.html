@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog_Website</title>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="">
+        <nav class="navbar bg-dark">
+                <h1 class="text-left mx-5 text-light bg-dark">My Blogging Website</h1>
+                <span class="text-right mx-5"><button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#myModal" onclick="">Create New Post</button></span>
+        </nav>
+          <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+          
+                <!-- Modal Header -->
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title bg-light">Create A Post</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+          
+                <!-- Modal body -->
+                    <div class="modal-body bg-light">
+                        <form id="inputs" class="needs-validation bg-light" novalidate="">
+                            <div class="form-group mx-2 mb-3 bg-light">
+                                <input type="text" class="form-control" id="heading" placeholder="Enter Your Heading..." required="">
+                            </div>
+                            <div class="form-group mx-2 bg-light">
+                                <textarea class="bg-light form-control" style="width: 100%; height: 100%;" form="inputs" id="post" placeholder="Enter Your Blog Post..." required=""></textarea>
+                            </div>
+                        </form>
+                    </div>  
+                    <div class="modal-footer justify">
+                        <button id="submit" type="button" class="btn btn-light" data-toggle="modal" data-target="#modalForm">Publish Post</button>
+                        <button id="close" type="button" class="btn btn-light">Cancel Post</button>
+                    </div>
+                </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid h-100 section">
+        <div class="row h-100 d-flex ">
+            <div class="col-sm-12">
+                <p style="font-size: 24;" id="results"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
